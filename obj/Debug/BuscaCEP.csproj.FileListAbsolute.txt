@@ -1,0 +1,10 @@
+P:\BuscaCEP\bin\Debug\BuscaCEP.exe.config
+P:\BuscaCEP\bin\Debug\BuscaCEP.exe
+P:\BuscaCEP\bin\Debug\BuscaCEP.pdb
+P:\BuscaCEP\obj\Debug\BuscaCEP.csprojAssemblyReference.cache
+P:\BuscaCEP\obj\Debug\BuscaCEP.BuscarCEP.resources
+P:\BuscaCEP\obj\Debug\BuscaCEP.Properties.Resources.resources
+P:\BuscaCEP\obj\Debug\BuscaCEP.csproj.GenerateResource.cache
+P:\BuscaCEP\obj\Debug\BuscaCEP.csproj.CoreCompileInputs.cache
+P:\BuscaCEP\obj\Debug\BuscaCEP.exe
+P:\BuscaCEP\obj\Debug\BuscaCEP.pdb
