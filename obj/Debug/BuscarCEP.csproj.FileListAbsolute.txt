@@ -8,7 +8,6 @@ P:\BuscarCEP\bin\Debug\System.Net.Http.Formatting.dll
 P:\BuscarCEP\bin\Debug\EPPlus.xml
 P:\BuscarCEP\bin\Debug\Newtonsoft.Json.xml
 P:\BuscarCEP\bin\Debug\System.Net.Http.Formatting.xml
-P:\BuscarCEP\obj\Debug\BuscarCEP.csprojAssemblyReference.cache
 P:\BuscarCEP\obj\Debug\BuscaCEP.BuscarCEP.resources
 P:\BuscarCEP\obj\Debug\BuscaCEP.Properties.Resources.resources
 P:\BuscarCEP\obj\Debug\BuscarCEP.csproj.GenerateResource.cache
@@ -16,3 +15,11 @@ P:\BuscarCEP\obj\Debug\BuscarCEP.csproj.CoreCompileInputs.cache
 P:\BuscarCEP\obj\Debug\BuscarCEP.csproj.CopyComplete
 P:\BuscarCEP\obj\Debug\BuscaCEP.exe
 P:\BuscarCEP\obj\Debug\BuscaCEP.pdb
+P:\BuscarCEP\bin\Debug\ClosedXML.dll
+P:\BuscarCEP\bin\Debug\DocumentFormat.OpenXml.dll
+P:\BuscarCEP\bin\Debug\ExcelNumberFormat.dll
+P:\BuscarCEP\bin\Debug\System.IO.Packaging.dll
+P:\BuscarCEP\bin\Debug\ClosedXML.pdb
+P:\BuscarCEP\bin\Debug\ClosedXML.xml
+P:\BuscarCEP\bin\Debug\DocumentFormat.OpenXml.xml
+P:\BuscarCEP\bin\Debug\ExcelNumberFormat.xml

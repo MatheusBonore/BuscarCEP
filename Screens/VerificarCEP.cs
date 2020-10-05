@@ -1,6 +1,7 @@
 ﻿using BuscaCEP.Functions;
 using BuscaCEP.Models;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
 
@@ -41,20 +42,47 @@ namespace BuscaCEP
 
         private void VerificarCEP_Click(object sender, EventArgs e)
         {
-            Endereco endereco = Consultar.RetornarEndereco(17512883);
-            if (endereco != null)
+            if (txtFileListaCEP.Text.Length != 0)
             {
-                Planilha.GravarArquivo(PathFileResultados, 1, 1, "Logradouro");
-                Planilha.GravarArquivo(PathFileResultados, 1, 2, "Bairro");
-                Planilha.GravarArquivo(PathFileResultados, 1, 3, "UF");
-                Planilha.GravarArquivo(PathFileResultados, 1, 4, "CEP");
+                if (txtFileResultados.Text.Length != 0)
+                {
+                    List<CEP> ceps = new List<CEP>();
+                    List<Endereco> enderecos = new List<Endereco>();
+                    Endereco endereco = new Endereco();
 
-                Planilha.GravarArquivo(PathFileResultados, 2, 1, endereco.Logradouro);
-                Planilha.GravarArquivo(PathFileResultados, 2, 2, endereco.Bairro);
-                Planilha.GravarArquivo(PathFileResultados, 2, 3, endereco.UF);
-                Planilha.GravarArquivo(PathFileResultados, 2, 4, endereco.CEP);
+                    Planilha.LerArquivo(PathFileCEPs, ceps);
 
-                MessageBox.Show("Terminou", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    foreach (CEP cep in ceps)
+                    {
+                        for (double NumeroCEP = Double.Parse(cep.CEPInicial); NumeroCEP <= Double.Parse(cep.CEPFinal); NumeroCEP++)
+                        {
+                            //Endereco endereco = Consultar.RetornarEndereco(NumeroCEP);
+
+                            endereco.Bairro = "Bairro";
+                            endereco.CEP = NumeroCEP.ToString();
+                            endereco.Logradouro = "Logradouro";
+                            endereco.UF = "UF";
+
+                            if (endereco != null)
+                                enderecos.Add(endereco);
+                        }
+                    }
+
+                    Planilha.GerarArquivo(PathFileResultados, "Sheet1", enderecos);
+
+                    ceps.Clear();
+                    enderecos.Clear();
+
+                    MessageBox.Show("Terminou", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Primeiro selecione o caminho que será salvo os Resultados", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Primeiro selecione a planilha com o CEPs", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

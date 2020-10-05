@@ -35,6 +35,7 @@
             this.lblResultados = new System.Windows.Forms.Label();
             this.txtFileResultados = new System.Windows.Forms.TextBox();
             this.btnProcurarPasta = new System.Windows.Forms.Button();
+            this.progressBar = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // btnVerificarCEP
@@ -101,11 +102,19 @@
             this.btnProcurarPasta.UseVisualStyleBackColor = true;
             this.btnProcurarPasta.Click += new System.EventHandler(this.btnProcurarPasta_Click);
             // 
+            // progressBar
+            // 
+            this.progressBar.Location = new System.Drawing.Point(12, 62);
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Size = new System.Drawing.Size(445, 23);
+            this.progressBar.TabIndex = 7;
+            // 
             // BuscarCEP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(552, 94);
+            this.Controls.Add(this.progressBar);
             this.Controls.Add(this.btnProcurarPasta);
             this.Controls.Add(this.txtFileResultados);
             this.Controls.Add(this.lblResultados);
@@ -132,6 +141,7 @@
         private System.Windows.Forms.Label lblResultados;
         private System.Windows.Forms.TextBox txtFileResultados;
         private System.Windows.Forms.Button btnProcurarPasta;
+        private System.Windows.Forms.ProgressBar progressBar;
     }
 }
 

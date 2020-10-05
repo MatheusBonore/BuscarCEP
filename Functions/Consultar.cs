@@ -9,7 +9,7 @@ namespace BuscaCEP.Functions
 {
     class Consultar
     {
-        public static Endereco RetornarEndereco(int CEP)
+        public static Endereco RetornarEndereco(double CEP)
         {
             Endereco endereco = new Endereco();
 
@@ -25,7 +25,8 @@ namespace BuscaCEP.Functions
             }
             catch (WebException e)
             {
-                MessageBox.Show("Servidor indisponível ou Requisição incorreta \n Detalhes: " + e.Status, "Erro ao consultar CEP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine(CEP);
+                //MessageBox.Show("Servidor indisponível ou Requisição incorreta \n Detalhes: " + e.Status, "Erro ao consultar CEP", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
 
@@ -49,7 +50,7 @@ namespace BuscaCEP.Functions
                                 string[] valor = substring.Split(":".ToCharArray());
                                 if (valor[0] == "  erro")
                                 {
-                                    MessageBox.Show("CEP não encontrado");
+                                    //MessageBox.Show("CEP não encontrado");
                                     return null;
                                 }
                                 endereco.CEP = valor[1];
